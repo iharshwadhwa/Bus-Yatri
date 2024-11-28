@@ -2,135 +2,158 @@ import React from "react";
 import './main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'leaflet/dist/leaflet.css';
+
 import '@fortawesome/fontawesome-free/css/all.css';
 
 const Main = () => {
+  const handleLogout = () => {
+    // Clear token from local storage
+    localStorage.removeItem('token'); // Replace 'authToken' with the key you use to store the token
+  
+    // Optionally, you can redirect the user to the home or login page
+    window.location.href = '/login'; // Redirect to login page (adjust if needed)
+  };
   return (
     <>
       {/* Navbar Section */}
       <nav className="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
-        <div className="container">
-          {/* Brand */}
-          <a className="navbar-brand" href="#">
-            <img
-              src="src/assets/img/busYatri-removebg-preview copy.png"
-              alt="redBus"
-              width="80px"
-              height="90px"
-            />
+  <div className="container">
+    {/* Brand */}
+    <a className="navbar-brand" href="#">
+      <img
+        src="src/assets/img/busYatri-removebg-preview copy.png"
+        alt="redBus"
+        width="80px"
+        height="90px"
+      />
+    </a>
+    {/* Toggler/collapsibe Button */}
+    <button
+      className="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#menu-nav"
+    >
+      <span className="navbar-toggler-icon" />
+    </button>
+    {/* Navbar links */}
+    <div className="collapse navbar-collapse" id="menu-nav">
+      {/* Left-aligned nav (default) */}
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <a className="nav-link text-white text-uppercase" href="/buses">
+            Bus Details
           </a>
-          {/* Toggler/collapsibe Button */}
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#menu-nav"
+        </li>
+        <li className="nav-item">
+          <a className="nav-link text-white text-uppercase" href="/addbuses">
+            Add Buses
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link text-white text-uppercase" href="#">
+            Bus Hire
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link text-white text-uppercase" href="#">
+            Pilgrimages
+          </a>
+        </li>
+      </ul>
+      {/* Right-aligned nav */}
+      <ul className="navbar-nav ml-auto">
+        <li className="nav-item">
+          <a className="nav-link text-white" href="#">
+            Help
+          </a>
+        </li>
+        <li className="nav-item dropdown">
+          <a
+            className="nav-link dropdown-toggle text-white"
+            href="#"
+            data-toggle="dropdown"
           >
-            <span className="navbar-toggler-icon" />
-          </button>
-          {/* Navbar links */}
-          <div className="collapse navbar-collapse" id="menu-nav">
-            {/* Left-aligned nav (default) */}
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link text-white text-uppercase" href="/buses">
-                  Bus Details
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white text-uppercase" href="/addbuses">
-                  Add Buses
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white text-uppercase" href="#">
-                  Bus Hire
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white text-uppercase" href="#">
-                  Pilgrimages
-                </a>
-              </li>
-            </ul>
-            {/* Right-aligned nav */}
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <a className="nav-link text-white" href="#">
-                  Help
-                </a>
-              </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle text-white"
-                  href="#"
-                  data-toggle="dropdown"
-                >
-                  Manage Booking
-                </a>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="#">
-                    Link 1
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Link 2
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Link 3
-                  </a>
-                </div>
-              </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle text-white"
-                  href="/profile"
-                  data-toggle="dropdown"
-                >
-                  <i className="fas fa-user-circle" />
-                </a>
-                <div className="dropdown-menu" style={{
-                  position: "fixed",
-                  top: 0,
-                  left: 0,
-                  width: "50vw",
-                  height: "50vh",
-                  zIndex: 1000
-                }}>
-                  <div style={{
-                    border: "2px solid blue",
-                    padding: 20,
-                    width: "100%",
-                    height: "100%",
-                    marginRight: 0,
-                    overflow: "auto"
-                  }}>
-                    <h1 className="bg-primary text-dark">User List</h1>
-                    {/* Template for iterating over users list */}
-                    {/* <table className="table table-striped">
-                      <thead>
-                        <tr>
-                          <th>Username</th>
-                          <th>Password</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>{user.fullname}</td>
-                          <td>{user.psw}</td>
-                          <td>
-                            <a href="/editUser?userid={user._id}">Edit</a> |
-                            <a href="/deleteUser?userid={user._id}">Delete</a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table> */}
-                  </div>
-                </div>
-              </li>
-            </ul>
+            Manage Booking
+          </a>
+          <div className="dropdown-menu">
+            <a className="dropdown-item" href="#">
+              Link 1
+            </a>
+            <a className="dropdown-item" href="#">
+              Link 2
+            </a>
+            <a className="dropdown-item" href="#">
+              Link 3
+            </a>
           </div>
-        </div>
-      </nav>
+        </li>
+        <li className="nav-item dropdown">
+          <a
+            className="nav-link dropdown-toggle text-white"
+            href="/profile"
+            data-toggle="dropdown"
+          >
+            <i className="fas fa-user-circle" />
+          </a>
+          <div
+            className="dropdown-menu"
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "50vw",
+              height: "50vh",
+              zIndex: 1000,
+            }}
+          >
+            <div
+              style={{
+                border: "2px solid blue",
+                padding: 20,
+                width: "100%",
+                height: "100%",
+                marginRight: 0,
+                overflow: "auto",
+              }}
+            >
+              <h1 className="bg-primary text-dark">User List</h1>
+              {/* Template for iterating over users list */}
+              {/* <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Username</th>
+                    <th>Password</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{user.fullname}</td>
+                    <td>{user.psw}</td>
+                    <td>
+                      <a href="/editUser?userid={user._id}">Edit</a> |
+                      <a href="/deleteUser?userid={user._id}">Delete</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table> */}
+            </div>
+          </div>
+        </li>
+        {/* Logout Button */}
+        <li className="nav-item">
+          <button
+            className="nav-link text-white bg-transparent border-0"
+            onClick={handleLogout}
+          >
+            Logout
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
       {/* Main Home Banner and Input Search Container */}
       <div className="position-relative">
@@ -462,7 +485,14 @@ const Main = () => {
             />
           </a>
         </div>
-        <div className="mb-5 mt-4 font-weight-light lead">Give Feedback</div>
+        <div className="mb-5 mt-4 font-weight-light lead"><a 
+    href="https://docs.google.com/forms/d/e/1FAIpQLScpJUub4pf3N_9rwx43AdHtnS9QVfCvX22aZIonmQGTCVKIhQ/viewform?usp=sf_link" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="btn btn-primary"
+  >
+    Give Feedback
+   </a></div>
         <div className="m-4 p-1 text-muted">
           We take care of your travel beyond ticketing by providing you with
           innovative and unique benefits.
@@ -475,4 +505,4 @@ const Main = () => {
     </>
   );
 };
-export default Main;
+export default Main;
