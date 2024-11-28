@@ -1,0 +1,53 @@
+.bus-list-container {
+    background: linear-gradient(135deg, #ffffff, #6e8efb);
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling */
+}
+
+.title {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2rem;
+}
+
+.bus-list {
+    width: 100%;/* Center the content */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between items */
+}
+
+.bus-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bus-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.book-now-button {
+    padding: 10px 15px;
+    background-color: #6e8efb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: start;
+}
+
+.book-now-button:hover {
+    background-color: #5a7de7;
+}
+

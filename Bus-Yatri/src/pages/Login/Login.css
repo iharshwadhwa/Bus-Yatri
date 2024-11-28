@@ -1,0 +1,82 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  
+  img.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 15%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .imgcontainer {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Login container */
+  .login-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Heading styling */
+  .login-container h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Input field styling */
+  input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+  
+  /* Button styling */
+  button[type="submit"].btn {
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"].btn:hover {
+    background-color: #3f51b5;
+  }
+  
+  /* Link styling */
+  p a {
+    color: #5c6bc0;
+    text-decoration: none;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,246 @@
+/* Navbar Styling */
+.navbar {
+    background-color: #007bff; /* Custom blue color */
+    padding: 0.8rem 1rem;
+  }
+  
+  .navbar-brand img {
+    width: 80px;
+    height: 90px;
+  }
+  
+  .navbar-nav .nav-link {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff !important;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #f0f0f0 !important;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #fff;
+  }
+  
+  /* Main Banner */
+  .home-banner {
+    background-image: url('img/home-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    position: relative;
+    filter: brightness(70%);
+  }
+  
+  /* City Selection */
+  .city-selection-container {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+  }
+  
+  .city-selection-container h3 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  form select {
+    border-radius: 30px;
+    margin: 10px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 1px solid #007bff;
+  }
+  
+  button.btn {
+    border-radius: 30px;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Cashback Container */
+  .cashback-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  .cashback-container .text-center {
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .cashback-container .text-muted {
+    font-size: 0.9rem;
+  }
+  
+  /* On-Time Guarantee Section */
+  .on-time-guarantee {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .on-time-guarantee img {
+    width: 80px;
+  }
+  
+  .on-time-guarantee h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .on-time-guarantee h4 {
+    color: #6c757d;
+    font-weight: 300;
+  }
+  
+  .on-time-guarantee div {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .on-time-guarantee h5 {
+    color: #007bff;
+    margin-bottom: 5px;
+  }
+  
+  .on-time-guarantee .font-weight-bold {
+    font-weight: bold;
+  }
+  
+  .on-time-guarantee .text-muted {
+    font-size: 0.9rem;
+  }
+  
+  /* Track My Bus Section */
+  .track-my-bus {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+  }
+  
+  .track-my-bus .float-left {
+    width: 50%;
+  }
+  
+  .track-my-bus .d-table-cell {
+    width: 50%;
+  }
+  
+  .track-my-bus h3 {
+    font-size: 2.5rem;
+    color: #007bff;
+  }
+  
+  .track-my-bus p {
+    color: #6c757d;
+  }
+  
+  .track-my-bus .btn-outline-primary {
+    border-radius: 30px;
+    font-weight: 600;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .on-time-guarantee {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .on-time-guarantee img {
+      margin-bottom: 20px;
+    }
+  
+    .track-my-bus .d-table-cell {
+      width: 100%;
+    }
+  }
+  .on-time-guarantee {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.on-time-guarantee img {
+    transition: transform 0.3s ease;
+}
+
+.on-time-guarantee img:hover {
+    transform: scale(1.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+
+.pt-4, .pb-4 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.font-weight-light {
+    font-weight: 300;
+}
+
+.font-weight-bold {
+    font-weight: 600;
+}
+
+.text-primary {
+    color: #007bff; /* Bootstrap primary color */
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+.refund-info {
+    flex: 1;
+    margin: 0 15px;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.refund-info:hover {
+    background-color: #f1f1f1;
+}
+
+  
